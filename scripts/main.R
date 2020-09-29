@@ -21,10 +21,20 @@ source("https://github.com/chronosphere-portal/case_pbdbRT/raw/master/scripts/me
 pbdbDat <- datasets("pbdb")
 
 # the occs, default variable
-occsVer<- pbdbDat[pbdbDat$var=="occs",]$ver
-
+# for all
+# occsVer<- pbdbDat[pbdbDat$var=="occs",]$ver
 # make sure it is unique
-occsVer <- unique(occsVer)
+# occsVer <- unique(occsVer)
+
+# specific
+occsVer <- c(
+	"20191122",
+	"20200217",
+	"20200623",
+	"20200807",
+	"20200817",
+	"20200905",
+	"20200929")
 
 # execute function for all vers
 rtDiv <- VarFromPBDB(occsVer, var="divRT")

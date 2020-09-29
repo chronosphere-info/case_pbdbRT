@@ -19,7 +19,7 @@ PlotRTsingle <-function(y, x, path, png=NULL, pdf=NULL){
 	if(!is.null(png)){
 		if(!file.exists(path)) system(paste0("mkdir ", path))
 		png(file.path(path, paste0(png, "_all.png")), width=1000, height=800)
-		Tp(ylim=c(0,8000))
+		Tp(ylim=c(0,8000), plot.args=list(main=paste0(colnames(y)[1]," - ",colnames(y)[ncol(y)])), ylab="RT diversity (genera)")
 		for(i in 1:ncol(y)){
 			ver <- colnames(y)[i]
 		#	mtext(3, text=ver)
