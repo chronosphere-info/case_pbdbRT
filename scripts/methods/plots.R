@@ -14,7 +14,7 @@ PlotRTcumulative<-function(y, x, path, png=NULL, pdf=NULL){
 
 }
 
-
+# ok
 PlotRTsingle <-function(y, x, path, png=NULL, pdf=NULL){
 	if(!is.null(png)){
 		if(!file.exists(path)) system(paste0("mkdir ", path))
@@ -31,6 +31,7 @@ PlotRTsingle <-function(y, x, path, png=NULL, pdf=NULL){
 
 }
 
+# new
 Tp <- function(...){
 	data(stages, package="divDyn")
 	divDyn::tsplot(stages, boxes="sys", shading="sys",xlim=4:95, ...)
